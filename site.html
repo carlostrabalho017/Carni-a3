@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lançaê — Sua Primeira Oportunidade</title>
+  <title>Ponte Universitario — Sua Primeira Oportunidade</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,9 +24,12 @@
       --radius-sm: 10px;
     }
 
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+
     html { scroll-behavior: smooth; }
+
 
     body {
       background: var(--bg);
@@ -37,6 +40,7 @@
       overflow-x: hidden;
     }
 
+
     /* ── GRAIN TEXTURE ─────────────────────────────── */
     body::before {
       content: '';
@@ -44,6 +48,7 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
       pointer-events: none;
     }
+
 
     /* ── NAV ───────────────────────────────────────── */
     nav {
@@ -90,6 +95,7 @@
     }
     .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
+
     /* hamburger */
     .hamburger {
       display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px;
@@ -105,6 +111,7 @@
     }
     .mobile-nav.open { display: flex; }
 
+
     /* ── HERO ──────────────────────────────────────── */
     .hero {
       min-height: 100svh;
@@ -112,6 +119,7 @@
       padding: 140px 24px 80px;
       position: relative; overflow: hidden; text-align: center;
     }
+
 
     /* Glow orbs */
     .hero::before {
@@ -129,6 +137,7 @@
       filter: blur(80px); pointer-events: none;
     }
 
+
     .hero-tag {
       display: inline-flex; align-items: center; gap: 7px;
       padding: 7px 16px; border-radius: 100px;
@@ -138,6 +147,7 @@
       animation: fadeUp 0.6s ease both;
     }
     .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
+
 
     .hero-title {
       font-family: 'Syne', sans-serif; font-weight: 800;
@@ -153,12 +163,14 @@
       background-clip: text;
     }
 
+
     .hero-sub {
       font-size: clamp(16px, 2vw, 19px); color: var(--muted);
       max-width: 520px; line-height: 1.7;
       margin-bottom: 44px; position: relative; z-index: 1;
       animation: fadeUp 0.6s 0.2s ease both;
     }
+
 
     .hero-btns {
       display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
@@ -186,6 +198,7 @@
     }
     .btn-ghost:hover { background: rgba(237,234,226,0.06); border-color: rgba(237,234,226,0.3); }
 
+
     .hero-stats {
       display: flex; gap: 48px; justify-content: center;
       margin-top: 64px; position: relative; z-index: 1;
@@ -196,6 +209,7 @@
       font-size: 32px; letter-spacing: -0.03em;
     }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
 
     /* ── MARQUEE ───────────────────────────────────── */
     .marquee-wrap {
@@ -212,6 +226,7 @@
       font-size: 13px; font-weight: 600; letter-spacing: 0.07em;
       color: rgba(255,92,43,0.6); padding: 0 20px;
     }
+
 
     /* ── SECTION COMMON ────────────────────────────── */
     section { padding: 96px 24px; }
@@ -233,15 +248,18 @@
     .section-head { text-align: center; margin-bottom: 60px; }
     .section-head .section-sub { margin: 14px auto 0; }
 
+
     /* fade-in-up on scroll */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal.visible { opacity: 1; transform: none; }
+
 
     /* ── TRILHAS ───────────────────────────────────── */
     .trilhas-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
 
     .path-card {
       border-radius: var(--radius); padding: 36px 32px;
@@ -257,6 +275,7 @@
     .path-card.yellow { background: linear-gradient(145deg, rgba(245,200,66,0.12), rgba(245,200,66,0.03)); border-color: rgba(245,200,66,0.22); }
     .path-card.purple { background: linear-gradient(145deg, rgba(124,110,255,0.12), rgba(124,110,255,0.03)); border-color: rgba(124,110,255,0.22); }
 
+
     /* conic shimmer on hover */
     .path-card::before {
       content: '';
@@ -265,6 +284,7 @@
       opacity: 0; transition: opacity 0.4s;
     }
     .path-card:hover::before { opacity: 1; }
+
 
     .card-icon {
       width: 60px; height: 60px; border-radius: 14px;
@@ -275,11 +295,13 @@
     .card-icon.yellow { background: rgba(245,200,66,0.13); }
     .card-icon.purple { background: rgba(124,110,255,0.13); }
 
+
     .card-title {
       font-family: 'Syne', sans-serif; font-weight: 800;
       font-size: 22px; letter-spacing: -0.025em; margin-bottom: 12px;
     }
     .card-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
+
 
     .card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
     .tag {
@@ -289,6 +311,7 @@
     .tag.orange { background: rgba(255,92,43,0.12); color: var(--orange); }
     .tag.yellow { background: rgba(245,200,66,0.1); color: var(--yellow); }
     .tag.purple { background: rgba(124,110,255,0.1); color: var(--purple); }
+
 
     .card-link {
       display: inline-flex; align-items: center; gap: 6px;
@@ -301,6 +324,7 @@
     .card-link.purple { color: var(--purple); }
     .arrow { font-size: 16px; transition: transform 0.2s; }
     .card-link:hover .arrow { transform: translateX(3px); }
+
 
     /* ── MODAL ─────────────────────────────────────── */
     .modal-overlay {
@@ -338,6 +362,7 @@
     .modal-tips li { font-size: 14px; color: var(--muted); line-height: 1.6; list-style: none; padding-left: 14px; position: relative; }
     .modal-tips li::before { content: '→'; position: absolute; left: 0; }
 
+
     /* ── QUIZ ──────────────────────────────────────── */
     #quiz { background: linear-gradient(180deg, rgba(245,200,66,0.03), transparent); }
     .quiz-card {
@@ -349,6 +374,7 @@
     }
     .quiz-pip { flex: 1; height: 3px; border-radius: 3px; background: rgba(255,255,255,0.1); transition: background 0.3s; }
     .quiz-pip.done { background: var(--orange); }
+
 
     .quiz-q {
       font-family: 'Syne', sans-serif; font-weight: 700;
@@ -364,6 +390,7 @@
     .quiz-opt:hover { border-color: rgba(255,92,43,0.4); background: rgba(255,92,43,0.06); transform: translateX(4px); }
     .quiz-opt.chosen { border-color: var(--orange); background: var(--orange-soft); }
 
+
     .quiz-result { text-align: center; }
     .quiz-result-icon { font-size: 64px; margin-bottom: 20px; }
     .quiz-result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
@@ -378,6 +405,7 @@
     }
     .btn-sm-ghost:hover { background: rgba(255,255,255,0.09); }
 
+
     /* ── RECURSOS ──────────────────────────────────── */
     .tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 44px; }
     .tab {
@@ -388,6 +416,7 @@
     }
     .tab:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
     .tab.active { background: var(--orange); border-color: var(--orange); color: #08080e; }
+
 
     .recursos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .recurso-card {
@@ -400,6 +429,7 @@
     .recurso-card.orange:hover { border-color: var(--orange-border); }
     .recurso-card.yellow:hover { border-color: rgba(245,200,66,0.22); }
     .recurso-card.purple:hover { border-color: rgba(124,110,255,0.22); }
+
 
     .recurso-icon {
       width: 40px; height: 40px; border-radius: 10px;
@@ -417,6 +447,7 @@
       font-size: 18px;
     }
     .recurso-card:hover .recurso-arrow { opacity: 1; transform: translate(2px, -2px); }
+
 
     /* ── STEPS ─────────────────────────────────────── */
     #como-funciona { background: linear-gradient(180deg, transparent, rgba(124,110,255,0.04), transparent); }
@@ -443,6 +474,7 @@
     .step-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 8px; }
     .step-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
+
     /* ── TESTIMONIALS ──────────────────────────────── */
     .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .test-card {
@@ -458,6 +490,7 @@
     }
     .test-name { font-weight: 700; font-size: 14px; }
     .test-role { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
 
     /* ── CTA FINAL ─────────────────────────────────── */
     #cta-final { padding: 80px 24px 120px; }
@@ -481,6 +514,7 @@
     }
     .cta-sub { color: var(--muted); font-size: 17px; margin-bottom: 40px; position: relative; z-index: 1; }
 
+
     /* ── FOOTER ────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
@@ -491,6 +525,7 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .footer-copy { font-size: 13px; color: var(--muted); }
+
 
     /* ── ANIMATIONS ────────────────────────────────── */
     @keyframes fadeUp {
@@ -509,6 +544,7 @@
       50%     { transform: translateY(-8px); }
     }
     .float { animation: float 3.5s ease-in-out infinite; }
+
 
     /* ── RESPONSIVE ────────────────────────────────── */
     @media (max-width: 900px) {
@@ -530,8 +566,10 @@
 </head>
 <body>
 
+
 <!-- GRAIN -->
 <div aria-hidden="true"></div>
+
 
 <!-- ══ NAV ══════════════════════════════════════════════ -->
 <nav>
@@ -559,6 +597,7 @@
     <a href="#quiz" class="nav-cta" style="width:fit-content; margin-top:8px;">Começar agora</a>
   </div>
 </nav>
+
 
 <!-- ══ HERO ══════════════════════════════════════════════ -->
 <header class="hero">
@@ -594,6 +633,7 @@
   </div>
 </header>
 
+
 <!-- ══ MARQUEE ════════════════════════════════════════════ -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -619,6 +659,7 @@
     <span>✦ MEI</span>
   </div>
 </div>
+
 
 <!-- ══ TRILHAS ════════════════════════════════════════════ -->
 <section id="trilhas">
@@ -669,6 +710,7 @@
   </div>
 </section>
 
+
 <!-- ══ MODAL ══════════════════════════════════════════════ -->
 <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="Detalhe da trilha">
   <div class="modal-box" id="modalBox">
@@ -676,6 +718,7 @@
     <div id="modalContent"></div>
   </div>
 </div>
+
 
 <!-- ══ QUIZ ═══════════════════════════════════════════════ -->
 <section id="quiz">
@@ -690,6 +733,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ══ RECURSOS ═══════════════════════════════════════════ -->
 <section id="recursos">
@@ -708,6 +752,7 @@
     <div class="recursos-grid reveal" id="recursosGrid"></div>
   </div>
 </section>
+
 
 <!-- ══ COMO FUNCIONA ═══════════════════════════════════════ -->
 <section id="como-funciona">
@@ -742,6 +787,7 @@
   </div>
 </section>
 
+
 <!-- ══ DEPOIMENTOS ════════════════════════════════════════ -->
 <section id="depoimentos">
   <div class="section-inner">
@@ -772,6 +818,7 @@
   </div>
 </section>
 
+
 <!-- ══ CTA FINAL ══════════════════════════════════════════ -->
 <section id="cta-final">
   <div class="section-inner">
@@ -783,6 +830,7 @@
   </div>
 </section>
 
+
 <!-- ══ FOOTER ═════════════════════════════════════════════ -->
 <footer>
   <div class="footer-inner">
@@ -793,6 +841,7 @@
     <p class="footer-copy">Feito por Carlos Eduardo, Guilherme, Igor, Vinicius, com carinho para jovens que estão começando</p>
   </div>
 </footer>
+
 
 <script>
 // ═══════════════════════════════════════
@@ -834,6 +883,7 @@ const pathData = {
   }
 };
 
+
 const recursos = [
   { cat:'emprego', icon:'📄', title:'Modelo de Currículo', desc:'Template pronto pra preencher com suas informações.', color:'orange' },
   { cat:'emprego', icon:'✅', title:'Checklist LinkedIn', desc:'10 passos para um perfil que atrai recrutadores.', color:'orange' },
@@ -845,6 +895,7 @@ const recursos = [
   { cat:'pesquisa', icon:'📖', title:'Guia Plataforma Lattes', desc:'Configure seu Lattes do zero em 15 minutos.', color:'purple' },
   { cat:'pesquisa', icon:'🏅', title:'Calendário de Editais', desc:'Datas de PIBIC, FAPESP e outros programas nacionais.', color:'purple' }
 ];
+
 
 const quizQuestions = [
   {
@@ -873,6 +924,7 @@ const quizQuestions = [
   }
 ];
 
+
 // ═══════════════════════════════════════
 // MODAL
 // ═══════════════════════════════════════
@@ -880,6 +932,7 @@ function openModal(key) {
   const d = pathData[key];
   const stepColors = { emprego:'rgba(255,92,43,0.15); color:var(--orange)', negocio:'rgba(245,200,66,0.13); color:var(--yellow)', pesquisa:'rgba(124,110,255,0.13); color:var(--purple)' };
   const sc = stepColors[key];
+
 
   document.getElementById('modalContent').innerHTML = `
     <div class="modal-icon">${d.icon}</div>
@@ -906,18 +959,22 @@ function openModal(key) {
   document.body.style.overflow = 'hidden';
 }
 
+
 function closeModal() {
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
 }
 
+
 document.getElementById('modal').addEventListener('click', e => {
   if (e.target === document.getElementById('modal')) closeModal();
 });
 
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
+
 
 // keyboard support for path cards
 document.querySelectorAll('.path-card').forEach(card => {
@@ -926,11 +983,13 @@ document.querySelectorAll('.path-card').forEach(card => {
   });
 });
 
+
 // ═══════════════════════════════════════
 // QUIZ
 // ═══════════════════════════════════════
 let quizStep = 0;
 let quizScores = { emprego:0, negocio:0, pesquisa:0 };
+
 
 function renderQuiz() {
   const card = document.getElementById('quizCard');
@@ -952,12 +1011,14 @@ function renderQuiz() {
   }
 }
 
+
 function answerQuiz(path, btn) {
   quizScores[path]++;
   btn.classList.add('chosen');
   document.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
   setTimeout(() => { quizStep++; renderQuiz(); }, 420);
 }
+
 
 function showQuizResult() {
   const winner = Object.entries(quizScores).sort((a,b) => b[1]-a[1])[0][0];
@@ -977,18 +1038,22 @@ function showQuizResult() {
   `;
 }
 
+
 function resetQuiz() {
   quizStep = 0;
   quizScores = { emprego:0, negocio:0, pesquisa:0 };
   renderQuiz();
 }
 
+
 renderQuiz();
+
 
 // ═══════════════════════════════════════
 // RECURSOS
 // ═══════════════════════════════════════
 let activeTab = 'todos';
+
 
 function switchTab(tab, btnEl) {
   activeTab = tab;
@@ -996,6 +1061,7 @@ function switchTab(tab, btnEl) {
   if (btnEl) btnEl.classList.add('active');
   renderRecursos();
 }
+
 
 function renderRecursos() {
   const grid = document.getElementById('recursosGrid');
@@ -1010,7 +1076,9 @@ function renderRecursos() {
   `).join('');
 }
 
+
 renderRecursos();
+
 
 // ═══════════════════════════════════════
 // SCROLL REVEAL
@@ -1024,7 +1092,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
+
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
 
 // ═══════════════════════════════════════
 // HAMBURGER MENU
@@ -1032,6 +1102,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('burger').addEventListener('click', () => {
   document.getElementById('mobileNav').classList.toggle('open');
 });
+
 
 document.querySelectorAll('.mobile-nav a').forEach(a => {
   a.addEventListener('click', () => {
